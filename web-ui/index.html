@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Palace Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🧠 Memory</h2>
+    <ul>
+        <li class="active">Dashboard</li>
+        <li>Create Palace</li>
+        <li>Viewer</li>
+    </ul>
+</div>
+
+<div class="main">
+
+    <header>
+        <h1>Memory Palace Dashboard</h1>
+        <button onclick="openCreate()">+ New Palace</button>
+    </header>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>My House</h3>
+            <p>Pottery & History</p>
+            <div class="actions">
+                <button onclick="openViewer()">View</button>
+                <button>Edit</button>
+                <button class="danger">Delete</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Fantasy Castle</h3>
+            <p>D&D Lore & Quests</p>
+            <div class="actions">
+                <button onclick="openViewer()">View</button>
+                <button>Edit</button>
+                <button class="danger">Delete</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Library Workspace</h3>
+            <p>Programming Concepts</p>
+            <div class="actions">
+                <button onclick="openViewer()">View</button>
+                <button>Edit</button>
+                <button class="danger">Delete</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CREATE MODAL -->
+<div id="createModal" class="modal">
+    <div class="modal-content">
+        <h2>Create Memory Palace</h2>
+        <input type="text" placeholder="Name">
+        <textarea placeholder="Description"></textarea>
+        <div class="modal-actions">
+            <button onclick="closeCreate()">Cancel</button>
+            <button>Create</button>
+        </div>
+    </div>
+</div>
+
+<!-- VIEWER -->
+<div id="viewer" class="viewer hidden">
+    <div class="viewer-header">
+        <button onclick="closeViewer()">← Back</button>
+        <h2>Fantasy Castle</h2>
+    </div>
+
+    <div class="nodes">
+        <div class="node">Magic Room<br><span>Artifacts</span></div>
+        <div class="node">Main Hall<br><span>Events</span></div>
+        <div class="node">Quest Ideas<br><span>Plans</span></div>
+        <div class="node">Library<br><span>Knowledge</span></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
